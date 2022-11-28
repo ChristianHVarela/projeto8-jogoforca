@@ -8,7 +8,7 @@ import forca5 from "../../assets/forca5.png"
 import forca6 from "../../assets/forca6.png"
 
 function Jogo(props){
-    const {errors, gameStart, gameStarted, palavraArray, letrasEscolhidas, acertou, errou, palavraEscolhida} = props;
+    const {errors, gameStart, palavraArray, letrasEscolhidas, acertou, errou, palavraEscolhida} = props;
 
     return (
         <Container>
@@ -16,9 +16,9 @@ function Jogo(props){
                 ? forca1 : errors === 2 ? forca2 : errors === 3 
                 ? forca3 : errors === 4 ? forca4 : errors === 5 ? 
                 forca5 : forca6} />
-            <ContainerDireita>
+            <ContainerDireita> 
                 <ContainerButton>
-                    <ButtonEscolherPalavra data-test="choose-word" onClick={gameStart} disabled={gameStarted}>Escolher Palavra</ButtonEscolherPalavra>
+                    <ButtonEscolherPalavra data-test="choose-word" onClick={gameStart}>Escolher Palavra</ButtonEscolherPalavra>
                 </ContainerButton>
                 <ContainerLetras data-test="word" data-answer={palavraEscolhida}>
                     {palavraArray.map((letter, index) => {
