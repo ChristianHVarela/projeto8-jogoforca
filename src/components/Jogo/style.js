@@ -52,7 +52,7 @@ export const LetrasUnder = styled.p`
     font-family: 'Noto Sans';
     font-weight: 700;
     font-size: 50px;
-    color: ${(props) => (props.acertou ? 'green' : props.errou ? 'red' : 'black')};
+    color: ${(props) => (props.acertou ? '#27AE60' : props.errou ? '#FF0000' : '#000000')};
     margin-right: 5px;
 `
 export const ContainerButton = styled.div`
