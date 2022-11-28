@@ -21,7 +21,7 @@ function Letras(props){
             <ContainerLetras>
                 {alfabeto.map((item) => {
                     const desabilitado = (letrasEscolhidas.letras && letrasEscolhidas.letras.includes(item)) || !gameStarted
-                    return (<Letra disabled={desabilitado} key={item} onClick={() => escolheLetra(item)}>{item}</Letra>)
+                    return (<Letra data-test="letter" disabled={desabilitado} key={item} onClick={() => escolheLetra(item)}>{item}</Letra>)
                 })}
             </ContainerLetras>
         </Container>

@@ -42,7 +42,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Jogo errors={errors} gameStart={gameStart} gameStarted={gameStarted} palavraArray={palavraArray} letrasEscolhidas={letrasEscolhidas} acertou={acertou} errou={errou} />
+      <Jogo errors={errors} gameStart={gameStart} gameStarted={gameStarted} palavraArray={palavraArray} letrasEscolhidas={letrasEscolhidas} acertou={acertou} errou={errou} palavraEscolhida={palavraEscolhida} />
       <Letras letrasEscolhidas={letrasEscolhidas} gameStarted={gameStarted} palavraArray={palavraArray} setLetrasEscolhidas={setLetrasEscolhidas} errors={errors} setErrors={setErrors} gameOver={gameOver} />
       <Chute gameStarted={gameStarted} palavraEscolhida={palavraEscolhida} errors={errors} setErrors={setErrors} acertou={acertou} gameOver={gameOver} />
     </>

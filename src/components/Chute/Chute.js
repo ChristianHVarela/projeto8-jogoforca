@@ -23,8 +23,8 @@ function Chute(props){
         <Container>
             <Central>
                 <Paragrafo>Já sei a palavra!</Paragrafo>
-                <Input disabled={!gameStarted} onChange={(e) => setChute(e.target.value)} value={chute} />
-                <Button onClick={() => chutar()}>Chutar</Button>
+                <Input data-test="guess-input" disabled={!gameStarted} onChange={(e) => setChute(e.target.value)} value={chute} />
+                <Button data-test="guess-button" onClick={() => chutar()}>Chutar</Button>
             </Central>
         </Container>
     )
