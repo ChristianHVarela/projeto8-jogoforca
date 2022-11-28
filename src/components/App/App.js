@@ -15,11 +15,20 @@ function App() {
   const [errou, setErrou] = useState(false)
 
   function gameStart(){
+    reinincia()
     setGameStarted(true)
     setErrors(0)
     const palavraEsc = palavras[Math.floor(Math.random() * palavras.length)]
     setPalavraEscolhida(palavraEsc)
     setPalavraArray(separaPalavra(palavraEsc))
+  }
+
+  function reinincia(){
+    setPalavraEscolhida("")
+    setPalavraArray([])
+    setLetrasEscolhidas({letras: []})
+    setAcertou(false)
+    setErrou(false)
   }
 
   function separaPalavra(char){
